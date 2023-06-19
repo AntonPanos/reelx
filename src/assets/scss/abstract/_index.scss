@@ -1,0 +1,39 @@
+@import 'variables';
+@import 'fonts';
+@import 'utility';
+
+:root {
+  font-family: 'Poppins', sans-serif, system-ui;
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 400;
+  box-sizing: border-box;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  color: #213547;
+  background-color: #ffffff;
+}
+
+html {
+  height: 100vh;
+  height: calc(var(--app-height, 1vh) * 100);
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100%;
+}
+
+p {
+  margin: 0;
+}

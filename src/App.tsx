@@ -1,4 +1,8 @@
-import { IonApp, setupIonicReact } from '@ionic/react';
+import { setupIonicReact } from '@ionic/react';
+import Button from '@mui/material/Button';
+import ThemeProvider from '@mui/material/styles/ThemeProvider';
+
+import theme from './theming';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -19,9 +23,10 @@ import './theme/variables.scss';
 setupIonicReact();
 
 const App: React.FC = () => (
-  <IonApp>
-    <div>App Page Working</div>
-  </IonApp>
+  <ThemeProvider theme={theme}>
+    <div>Testing Material UI</div>
+    <Button>MateriaUI</Button>
+  </ThemeProvider>
 );
 
 export default App;
