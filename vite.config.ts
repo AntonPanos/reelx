@@ -15,7 +15,6 @@ const bigLibs = [
 function getManualChunks(deps: any) {
   return Object.keys(deps).reduce(
     (prev, cur) => {
-      // console.log("\nPREV: ", prev, "\nCUR: ", cur);
       let isBigLib = false;
       if (!cur.includes('@capacitor')) {
         for (const l of bigLibs) {
@@ -29,7 +28,6 @@ function getManualChunks(deps: any) {
             break;
           }
         }
-
         if (!isBigLib) prev.vendors.push(cur);
       }
       return prev;
