@@ -1,0 +1,7 @@
+{
+  "name": "reelx",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
