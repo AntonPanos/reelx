@@ -1,7 +1,8 @@
+import { BrowserRouter } from 'react-router-dom';
 import { setupIonicReact } from '@ionic/react';
-import Button from '@mui/material/Button';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
 
+import Routes from './routes';
 import theme from './theming';
 
 /* Core CSS required for Ionic components to work properly */
@@ -24,8 +25,9 @@ setupIonicReact();
 
 const App: React.FC = () => (
   <ThemeProvider theme={theme}>
-    <div>Testing Material UI</div>
-    <Button>MateriaUI</Button>
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
   </ThemeProvider>
 );
 
