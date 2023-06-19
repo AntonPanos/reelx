@@ -16,8 +16,8 @@ function getManualChunks(deps: any) {
   return Object.keys(deps).reduce(
     (prev, cur) => {
       // console.log("\nPREV: ", prev, "\nCUR: ", cur);
+      let isBigLib = false;
       if (!cur.includes('@capacitor')) {
-        let isBigLib = false;
         for (const l of bigLibs) {
           if (l.regExp.test(cur)) {
             isBigLib = true;
@@ -59,11 +59,11 @@ export default defineConfig({
   define: {
     'import.meta.env.PACKAGE_VERSION': JSON.stringify(packageJson.version),
   },
-  // build: {
-  //   rollupOptions: {
-  //     output: {
-  //       manualChunks: getManualChunks(packageJson.dependencies),
-  //     },
-  //   },
-  // },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: getManualChunks(packageJson.dependencies),
+      },
+    },
+  },
 });
