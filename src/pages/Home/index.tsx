@@ -1,27 +1,20 @@
+import useToastr from '@/hooks/useToastr';
 import { disableLoader, enableLoader } from '@/store/features/loaderSlice';
-import { enableToastr } from '@/store/features/toastrSlice';
 import { useAppDispatch } from '@/store/hooks';
 
 const Home: React.FC = () => {
   const dispatch = useAppDispatch();
+  const { createToastr } = useToastr();
+
+  const notify = () => {
+    createToastr('Message success', 'success');
+  };
 
   const testLoading = async (): Promise<void> => {
     dispatch(enableLoader());
     // eslint-disable-next-line no-promise-executor-return
     await new Promise((resolve) => setTimeout(resolve, 3000));
     dispatch(disableLoader());
-  };
-
-  const testSuccessToastr = async (): Promise<void> => {
-    dispatch(enableToastr({ message: 'Operation Success!', type: 'success' }));
-  };
-
-  const testErrorToastr = async (): Promise<void> => {
-    dispatch(enableToastr({ message: 'Operation Error!', type: 'error' }));
-  };
-
-  const testWarningToastr = async (): Promise<void> => {
-    dispatch(enableToastr({ message: 'Operation Warning!', type: 'warning' }));
   };
 
   return (
@@ -39,23 +32,9 @@ const Home: React.FC = () => {
       <button
         className="mb-2 h-10 w-fit rounded-lg bg-blue-500 px-6 text-white"
         type="button"
-        onClick={testSuccessToastr}
+        onClick={notify}
       >
-        Test Success Toastr
-      </button>
-      <button
-        className="mb-2 h-10 w-fit rounded-lg bg-blue-500 px-6 text-white"
-        type="button"
-        onClick={testErrorToastr}
-      >
-        Test Error Toastr
-      </button>
-      <button
-        className="mb-2 h-10 w-fit rounded-lg bg-blue-500 px-6 text-white"
-        type="button"
-        onClick={testWarningToastr}
-      >
-        Test Warning Toastr
+        Test Toaster
       </button>
     </div>
   );
