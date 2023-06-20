@@ -1,5 +1,3 @@
-import CircularProgress from '@mui/material/CircularProgress';
-
 import { useAppSelector } from '@/store/hooks';
 
 import './loader.scss';
@@ -9,7 +7,7 @@ const Loader: React.FC = () => {
 
   return (
     <div className="loader-container" style={{ display }}>
-      <CircularProgress />
+      <div>LOADER</div>
     </div>
   );
 };

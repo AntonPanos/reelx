@@ -1,6 +1,3 @@
-import Alert from '@mui/material/Alert';
-import Snackbar from '@mui/material/Snackbar';
-
 import { disableToastr } from '@/store/features/toastrSlice';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
 
