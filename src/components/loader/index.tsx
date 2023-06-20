@@ -7,7 +7,11 @@ const Loader: React.FC = () => {
 
   return (
     <div className="loader-container" style={{ display }}>
-      <div>LOADER</div>
+      <div className="three-body">
+        <div className="three-body__dot" />
+        <div className="three-body__dot" />
+        <div className="three-body__dot" />
+      </div>
     </div>
   );
 };

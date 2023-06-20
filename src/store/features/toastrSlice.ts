@@ -19,7 +19,7 @@ export const toastrSlice = createSlice({
     enableToastr: (state, action: PayloadAction<ToastrState>): void => {
       state.active = true;
       state.message = action.payload.message;
-      state.type = action.payload.type;
+      state.type = action.payload.type || initialState.type;
     },
     disableToastr: (state): void => {
       state.active = false;

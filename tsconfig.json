@@ -42,6 +42,11 @@
       "@/*": ["src/*"]
     }
   },
-  "include": [".eslintrc.json", "src"],
+  "include": [
+    ".eslintrc.json",
+    "src",
+    "postcss.config.js",
+    "tailwind.config.js"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

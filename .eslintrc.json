@@ -27,6 +27,8 @@
     "dist",
     "node_modules",
     "public/",
+    "android/",
+    "ios/",
     "**/*.min.js",
     "**/*.d.ts",
     "**/*.config.ts"
