@@ -1,26 +1,16 @@
 import { useCallback } from 'react';
 
-import { enableToastr } from '@/store/features/toastrSlice';
-import { useAppDispatch } from '@/store/hooks';
+import useToastr from './useToastr';
 
 const useError = () => {
-  const dispatch = useAppDispatch();
-
-  const handleError = useCallback(
-    (error: string): void => {
-      switch (error) {
-        default:
-          dispatch(
-            enableToastr({
-              message: 'There was an error',
-              type: 'error',
-            })
-          );
-          break;
-      }
-    },
-    [dispatch]
-  );
+  const { createToastr } = useToastr();
+  const handleError = useCallback((error: string): void => {
+    switch (error) {
+      default:
+        createToastr('There was an error', 'error');
+        break;
+    }
+  }, []);
   return { handleError };
 };
 
