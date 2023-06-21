@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import Provider from 'react-redux/es/components/Provider';
@@ -16,7 +15,7 @@ createRoot(document.getElementById('root') as HTMLElement).render(
     <Provider store={store}>
       <App />
       <Loader />
-      <ToastContainer closeButton={false} hideProgressBar />
+      <ToastContainer className="rounded" closeButton={false} hideProgressBar />
     </Provider>
   </React.StrictMode>
 );

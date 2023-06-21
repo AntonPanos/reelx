@@ -13,18 +13,21 @@ const useToastr = () => {
           toast.success(message, {
             position: toast.POSITION.BOTTOM_CENTER,
             autoClose: duration,
+            className: 'w-2/3 m-auto',
           });
           break;
         case 'error':
           toast.error(message, {
             position: toast.POSITION.BOTTOM_CENTER,
             autoClose: duration,
+            className: 'w-2/3 m-auto',
           });
           break;
         case 'warn':
           toast.warn(message, {
             position: toast.POSITION.BOTTOM_CENTER,
             autoClose: duration,
+            className: 'w-2/3 m-auto',
           });
           break;
         case 'info':
@@ -32,6 +35,7 @@ const useToastr = () => {
           toast.info(message, {
             position: toast.POSITION.BOTTOM_CENTER,
             autoClose: duration,
+            className: 'w-2/3 m-auto',
           });
           break;
       }
