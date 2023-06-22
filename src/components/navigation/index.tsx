@@ -19,7 +19,7 @@ const Navigation: React.FC = () => {
 
   return (
     <div className="fixed bottom-0 m-auto w-full">
-      <div className="max-h-[4.4rem] rounded-t-xl bg-gray-200 px-6">
+      <div className="max-h-[var(--nav-height)] rounded-t-xl bg-gray-200 px-6">
         <ul className="relative flex justify-around">
           {navMenu.map((menu, i) => (
             <li key={i} className="w-16">
