@@ -9,6 +9,10 @@ export default {
         secondary: '#CCD5AE',
         tertiary: '#FEFAE0',
       },
+      boxShadow: {
+        navShadowLeft: '4.1px -5px 0 0 white',
+        navShadowRight: '-4.1px -5px 0 0 white',
+      },
     },
   },
   plugins: [],
