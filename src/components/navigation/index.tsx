@@ -34,8 +34,8 @@ const Navigation: React.FC = () => {
                       : 'translate-y-10 opacity-0'
                   }`}
                 >
-                  <span className="absolute -left-[18px] top-4 h-3.5 w-3.5 rounded-tr-[11px] bg-transparent shadow-navShadowLeft" />
-                  <span className="absolute -right-[18px] top-4 h-3.5 w-3.5 rounded-tl-[11px] bg-transparent shadow-navShadowRight" />
+                  {/* <span className="absolute -left-[18px] top-4 h-3.5 w-3.5 rounded-tr-[11px] bg-transparent shadow-navShadowLeft" />
+                  <span className="absolute -right-[18px] top-4 h-3.5 w-3.5 rounded-tl-[11px] bg-transparent shadow-navShadowRight" /> */}
                 </span>
                 <span
                   className={`z-10 cursor-pointer text-xl duration-500 ${
