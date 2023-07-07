@@ -1,11 +1,10 @@
+import { API_URL } from '@/constants/api';
 import { IPost } from '@/interfaces/posts';
 import { IResponse } from '@/interfaces/services';
 
-const URL = 'http://localhost:1337/api';
-
 const getPosts = async (): Promise<Array<IPost>> => {
   try {
-    const response = await fetch(`${URL}/posts`, {
+    const response = await fetch(`${API_URL}/posts`, {
       method: 'GET',
     });
     const posts = (await response.json()) as IResponse<Array<IPost>>;
@@ -18,7 +17,7 @@ const getPosts = async (): Promise<Array<IPost>> => {
 
 const getPost = async (id: number): Promise<IPost> => {
   try {
-    const response = await fetch(`${URL}/posts/${id}`, {
+    const response = await fetch(`${API_URL}/posts/${id}`, {
       method: 'GET',
     });
     const post = (await response.json()) as IPost;

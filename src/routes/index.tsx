@@ -6,7 +6,7 @@ import NotFoundPage from '@/pages/NotFound';
 
 const MainRoutes: React.FC = () => {
   return (
-    <main>
+    <main className="h-full">
       <Routes>
         <Route index element={<Feed />} />
         <Route path="/dashboard" element={<Home />} />
